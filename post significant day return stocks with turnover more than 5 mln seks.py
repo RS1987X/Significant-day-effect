@@ -19,290 +19,287 @@ from datetime import date
 tday = date.today()
 tday_str = tday.strftime("%Y-%m-%d")
 
-re_names = "EVO.ST "
-"INVE-B.ST "
-"HM-B.ST "
-"ICA.ST "
-"ERIC-B.ST "
-"NDA-SE.ST "
-"AZN.ST "
-"VOLV-B.ST "
-"GETI-B.ST "
-"SAND.ST "
-"SWMA.ST "
-"ATCO-A.ST "
-"SWED-A.ST "
-"BOL.ST "
-"ESSITY-B.ST "
-"SEB-A.ST "
-"EMBRAC-B.ST "
-"SINCH.ST "
-"ASSA-B.ST "
-"HEXA-B.ST "
-"LUNE.ST "
-"ABB.ST "
-"NIBE-B.ST "
-"EQT.ST "
-"SKF-B.ST "
-"VOLCAR-B.ST "
-"ELUX-B.ST "
-"TELIA.ST "
-"SBB-B.ST "
-"SHB-A.ST "
-"LIFCO-B.ST "
-"SAGA-B.ST "
-"TEL2-B.ST "
-"ALFA.ST "
-"ATCO-B.ST "
-"CAST.ST "
-"ONCO.ST "
-"SSAB-B.ST "
-"SCA-B.ST "
-"ALIV-SDB.ST "
-"KINV-B.ST "
-"EPI-A.ST "
-"HUSQ-B.ST "
-"SKA-B.ST "
-"SF.ST "
-"BALD-B.ST "
-"SOBI.ST "
-"TIGO-SDB.ST "
-"NIVI-B.ST "
-"HTRO.ST "
-"TREL-B.ST "
-"SECU-B.ST "
-"INDU-C.ST "
-"EKTA-B.ST "
-"KIND-SDB.ST "
-"SSAB-A.ST "
-"VNE-SDB.ST "
-"AMAST.ST "
-"LUND-B.ST "
-"AZA.ST "
-"LATO-B.ST "
-"SAVE.ST "
-"EPI-B.ST "
-"STOR-B.ST "
-"AXFO.ST "
-"PCELL.ST "
-"KLARA-B.ST "
-"SHOT.ST "
-"DOM.ST "
-"SECT-B.ST "
-"INDT.ST "
-"BICO.ST "
-"ADDT-B.ST "
-"BILL.ST "
-"CTEK.ST "
-"TRUE-B.ST "
-"THULE.ST "
-"FABG.ST "
-"HOLM-B.ST "
-"HUFV-A.ST "
-"LOGI-A.ST "
-"ALIF-B.ST "
-"INTRUM.ST "
-"KAMBI.ST "
-"SAS.ST "
-"MIPS.ST "
-"FING-B.ST "
-"VESTUM.ST "
-"AAK.ST "
-"VITR.ST "
-"KDEV.ST "
-"WIHL.ST "
-"HUMBLE.ST "
-"NENT-B.ST "
-"BHG.ST "
-"JM.ST "
-"AEGIR.ST "
-"INSTAL.ST "
-"BEIJ-B.ST "
-"SAAB-B.ST "
-"HPOL-B.ST "
-"CTM.ST "
-"STORY-B.ST "
-"BOOZT.ST "
-"CIBUS.ST "
-"LIAB.ST "
-"NYF.ST "
-"VNV.ST "
-"WALL-B.ST "
-"STE-R.ST "
-"CINT.ST "
-"BETS-B.ST "
-"SWEC-B.ST "
-"ALLR.ST "
-"NETI-B.ST "
-"HEM.ST "
-"VIT-B.ST "
-"VIMIAN.ST "
-"BURE.ST "
-"RATO-B.ST "
-"DIOS.ST "
-"PNDX-B.ST "
-"LOOMIS.ST "
-"AFRY.ST "
-"LUMI.ST "
-"SUS.ST "
-"PDX.ST "
-"NEWA-B.ST "
-"NCC-B.ST "
-"SECARE.ST "
-"ARJO-B.ST "
-"ATRLJ-B.ST "
-"CORE-B.ST "
-"COOR.ST "
-"SFAB.ST "
-"MEKO.ST "
-"BMAX.ST "
-"SDIP-B.ST"
-"IPCO.ST "
-"CATE.ST "
-"CALTX.ST "
-"TROAX.ST "
-"LEO.ST "
-"NOLA-B.ST "
-"LOGI-B.ST "
-"BUFAB.ST "
-"LAGR-B.ST "
-"SKIS-B.ST "
-"MTG-B.ST "
-"PEAB-B.ST "
-"MYCR.ST "
-"CLAS-B.ST "
-"SYNSAM.ST "
-"AOI.ST "
-"HMS.ST "
-"ANOD-B.ST "
-"BRAV.ST "
-"SVOL-B.ST "
-"BILI-A.ST "
-"BIOT"
-"TOBII"
-"RESURS"
-"SCST"
-"SBB D"
-"G5EN"
-"M8G"
-"RVRC"
-"BONAV B"
-"GRNG"
-"NOBI"
-"BETCO"
-"NOBINA"
-"NCAB"
-"VOLO"
-"JOMA"
-"INWI"
-"EOLU B"
-"MTRS"
-"HNSA"
-"CRED A"
-"EXS"
-"NOTE"
-"SAGA D"
-"NP3"
-"GARO"
-"BIOA B"
-"RENEW"
-"FNM"
-"OX2"
-"CLA B"
-"SEYE"
-"MCOV B"
-"EPRO B"
-"DSNO"
-"COIC"
-"COALA"
-"ENQ"
-"DUST"
-"BALCO"
-"TRANS"
-"AMBEA"
-"COLL"
-"KNOW"
-"TETY"
-"SOLT"
-"CAMX"
-"CI B"
-"ATT"
-"AAC"
-"ALIG"
-"8TRA"
-"CARY"
-"ACAD"
-"GENO"
-"CANTA"
-"BEIA B"
-"SIGNUP"
-"BFG"
-"FG"
-"IVACC"
-"ISOFOL"
-"EG7"
-"SEDANA"
-"ACCON"
-"ISR"
-"NWG"
-"ACAST"
-"XVIVO"
-"OEM B"
-"BONEX"
-"SIVE"
-"THUNDR"
-"EXPRS2"
-"AZELIO"
-"CEVI"
-"HANZA"
-"BERG B"
-"TFBANK"
-"ASAB"
-"BRG B"
-"BULTEN"
-"HLDX"
-"BIOG B"
-"BUSER"
-"KFAST B"
-"IMP A SDB"
-"INTEG B"
-"FLAT B"
-"KAR"
-"IMMNOV"
-"DOXA"
-"ESSITY A"
-"LUG"
-"CS"
-"GREEN"
-"READ"
-"NITRO"
-"PRIC B"
-"PLEX"
-"MAHA A"
-"HUM"
-"PIEZO"
-"BTS B"
-"MANTEX"
-"FASTAT"
-"OASM"
-"OPTI"
-"IRIS"
-"STEF B"
-"FPIP"
-"VEFAB"
-"CAT B"
-"FAG"
-"CDON"
-"LINC"
-"MCAP"
-"HOFI"
-"RAY B"
-"EAST"
-"DUNI"
-"IDUN B"
-"PLAZ B"
-"BEGR"
-"AWRD"
+re_names = "EVO.ST "\
+"INVE-B.ST "\
+"HM-B.ST "\
+"ICA.ST "\
+"ERIC-B.ST "\
+"NDA-SE.ST "\
+"AZN.ST "\
+"VOLV-B.ST "\
+"GETI-B.ST "\
+"SAND.ST "\
+"SWMA.ST "\
+"ATCO-A.ST "\
+"SWED-A.ST "\
+"BOL.ST "\
+"ESSITY-B.ST "\
+"SEB-A.ST "\
+"EMBRAC-B.ST "\
+"SINCH.ST "\
+"ASSA-B.ST "\
+"HEXA-B.ST "\
+"LUNE.ST "\
+"ABB.ST "\
+"NIBE-B.ST "\
+"EQT.ST "\
+"SKF-B.ST "\
+"VOLCAR-B.ST "\
+"ELUX-B.ST "\
+"TELIA.ST "\
+"SBB-B.ST "\
+"SHB-A.ST "\
+"LIFCO-B.ST "\
+"SAGA-B.ST "\
+"TEL2-B.ST "\
+"ALFA.ST "\
+"ATCO-B.ST "\
+"CAST.ST "\
+"ONCO.ST "\
+"SSAB-B.ST "\
+"SCA-B.ST "\
+"ALIV-SDB.ST "\
+"KINV-B.ST "\
+"EPI-A.ST "\
+"HUSQ-B.ST "\
+"SKA-B.ST "\
+"SF.ST "\
+"BALD-B.ST "\
+"SOBI.ST "\
+"TIGO-SDB.ST "\
+"NIVI-B.ST "\
+"HTRO.ST "\
+"TREL-B.ST "\
+"SECU-B.ST "\
+"INDU-C.ST "\
+"EKTA-B.ST "\
+"KIND-SDB.ST "\
+"SSAB-A.ST "\
+"VNE-SDB.ST "\
+"AMAST.ST "\
+"LUND-B.ST "\
+"AZA.ST "\
+"LATO-B.ST "\
+"SAVE.ST "\
+"EPI-B.ST "\
+"STOR-B.ST "\
+"AXFO.ST "\
+"PCELL.ST "\
+"KLARA-B.ST "\
+"SHOT.ST "\
+"DOM.ST "\
+"SECT-B.ST "\
+"INDT.ST "\
+"BICO.ST "\
+"ADDT-B.ST "\
+"BILL.ST "\
+"CTEK.ST "\
+"TRUE-B.ST "\
+"THULE.ST "\
+"FABG.ST "\
+"HOLM-B.ST "\
+"HUFV-A.ST "\
+"LOGI-A.ST "\
+"ALIF-B.ST "\
+"INTRUM.ST "\
+"KAMBI.ST "\
+"SAS.ST "\
+"MIPS.ST "\
+"FING-B.ST "\
+"VESTUM.ST "\
+"AAK.ST "\
+"VITR.ST "\
+"KDEV.ST "\
+"WIHL.ST "\
+"HUMBLE.ST "\
+"NENT-B.ST "\
+"BHG.ST "\
+"JM.ST "\
+"AEGIR.ST "\
+"INSTAL.ST "\
+"BEIJ-B.ST "\
+"SAAB-B.ST "\
+"HPOL-B.ST "\
+"CTM.ST "\
+"STORY-B.ST "\
+"BOOZT.ST "\
+"CIBUS.ST "\
+"LIAB.ST "\
+"NYF.ST "\
+"VNV.ST "\
+"WALL-B.ST "\
+"STE-R.ST "\
+"CINT.ST "\
+"BETS-B.ST "\
+"SWEC-B.ST "\
+"ALLR.ST "\
+"NETI-B.ST "\
+"HEM.ST "\
+"VIT-B.ST "\
+"VIMIAN.ST "\
+"BURE.ST "\
+"RATO-B.ST "\
+"DIOS.ST "\
+"PNDX-B.ST "\
+"LOOMIS.ST "\
+"AFRY.ST "\
+"LUMI.ST "\
+"SUS.ST "\
+"PDX.ST "\
+"NEWA-B.ST "\
+"NCC-B.ST "\
+"SECARE.ST "\
+"ARJO-B.ST "\
+"ATRLJ-B.ST "\
+"CORE-B.ST "\
+"COOR.ST "\
+"SFAB.ST "\
+"MEKO.ST "\
+"BMAX.ST "\
+"SDIP-B.ST "\
+"IPCO.ST "\
+"CATE.ST "\
+"CALTX.ST "\
+"TROAX.ST "\
+"LEO.ST "\
+"NOLA-B.ST "\
+"LOGI-B.ST "\
+"BUFAB.ST "\
+"LAGR-B.ST "\
+"SKIS-B.ST "\
+"MTG-B.ST "\
+"PEAB-B.ST "\
+"MYCR.ST "\
+"CLAS-B.ST "\
+"SYNSAM.ST "\
+"AOI.ST "\
+"HMS.ST "\
+"ANOD-B.ST "\
+"BRAV.ST "\
+"SVOL-B.ST "\
+"BILI-A.ST "\
+"BIOT.ST "\
+"TOBII.ST "\
+"RESURS.ST "\
+"SCST.ST "\
+"G5EN.ST "\
+"M8G.ST "\
+"RVRC.ST "\
+"BONAV-B.ST "\
+"GRNG.ST "\
+"NOBI.ST "\
+"BETCO.ST "\
+"NOBINA.ST "\
+"NCAB.ST "\
+"VOLO.ST "\
+"JOMA.ST "\
+"INWI.ST "\
+"EOLU-B.ST "\
+"MTRS.ST "\
+"HNSA.ST "\
+"CRED-A.ST "\
+"EXS.ST "\
+"NOTE.ST "\
+"NP3.ST "\
+"GARO.ST "\
+"BIOA-B.ST "\
+"RENEW.ST "\
+"FNM.ST "\
+"OX2.ST "\
+"CLA-B.ST "\
+"SEYE.ST "\
+"MCOV-B.ST "\
+"EPRO-B.ST "\
+"DSNO.ST "\
+"COIC.ST "\
+"COALA.ST "\
+"ENQ.ST "\
+"DUST.ST "\
+"BALCO.ST "\
+"TRANS.ST "\
+"AMBEA.ST "\
+"COLL.ST "\
+"KNOW.ST "\
+"TETY.ST "\
+"SOLT.ST "\
+"CAMX.ST "\
+"CI-B.ST "\
+"ATT.ST "\
+"AAC.ST "\
+"ALIG.ST "\
+"8TRA.ST "\
+"CARY.ST "\
+"ACAD.ST "\
+"GENO.ST "\
+"CANTA.ST "\
+"BEIA-B.ST "\
+"SIGNUP.ST "\
+"BFG.ST "\
+"FG.ST "\
+"IVACC.ST "\
+"ISOFOL.ST "\
+"EG7.ST "\
+"SEDANA.ST "\
+"ACCON.ST "\
+"ISR.ST "\
+"NWG.ST "\
+"ACAST.ST "\
+"XVIVO.ST "\
+"OEM-B.ST "\
+"BONEX.ST "\
+"SIVE.ST "\
+"THUNDR.ST "\
+"EXPRS2.ST "\
+"AZELIO.ST "\
+"CEVI.ST "\
+"HANZA.ST "\
+"BERG-B.ST "\
+"TFBANK.ST "\
+"ASAB.ST "\
+"BRG-B.ST "\
+"BULTEN.ST "\
+"HLDX.ST "\
+"BIOG-B.ST "\
+"BUSER.ST "\
+"KFAST-B.ST "\
+"IMP-A-SDB.ST "\
+"INTEG-B.ST "\
+"FLAT-B.ST "\
+"KAR.ST "\
+"IMMNOV.ST "\
+"DOXA.ST "\
+"LUG.ST "\
+"CS.ST "\
+"GREEN.ST "\
+"READ.ST "\
+"NITRO.ST "\
+"PRIC-B.ST "\
+"PLEX.ST "\
+"MAHA-A.ST "\
+"HUM.ST "\
+"PIEZO.ST "\
+"BTS-B.ST "\
+"MANTEX.ST "\
+"FASTAT.ST "\
+"OASM.ST "\
+"OPTI.ST "\
+"IRIS.ST "\
+"STEF-B.ST "\
+"FPIP.ST "\
+"VEFAB.ST "\
+"CAT-B.ST "\
+"FAG.ST "\
+"CDON.ST "\
+"LINC.ST "\
+"MCAP.ST "\
+"HOFI.ST "\
+"RAY-B.ST "\
+"EAST.ST "\
+"DUNI.ST "\
+"IDUN-B.ST "\
+"PLAZ-B.ST "\
+"BEGR.ST "\
+"AWRD.ST"
 
 #=============================================================================
 # ============================================================================
@@ -339,11 +336,18 @@ r_vol=volumes/volumes.rolling(20).mean().shift(1)
 ret_daily = close_prices.pct_change()
 
 
-#create binary dataframe to exclude stocks with big move large volume days in the last n sessions
-significant_days = (r_vol > 3) & (ret_daily > 0.02) & (ret_daily < 0.1)
- 
+#calculate average daily turnover
+ADT = close_prices.rolling(20).mean().shift(1)*volumes.rolling(20).mean().shift(1)/1000000
+
+#create binary dataframe to exclude stocks with big move large volume days in the last n sessions, filter out low volume stocks
+significant_days = (r_vol > 2.75) & (ret_daily > 0.0) & (ret_daily < 0.08) & (ADT > 3)# & (ADT < 50)
+
+
 #create position indicator df
 long_ind = significant_days.shift(1)
+
+#filter out days where more than 5 trades are done
+long_ind = long_ind[long_ind.sum(axis=1) < 6]
 
 #long_ind = (ret_5d < 0) 
 #replace false with NaN to avoid 0s impacting the mean
@@ -352,8 +356,7 @@ long_returns_daily = ret_daily*long_ind
 
 
 #calc transaction cost
-trans = long_ind-long_ind.shift(1)
-n_trans = trans.count().sum()
+n_trans = long_ind.sum().sum()
 
 trans_value = n_trans*50000
 total_trans_cost = n_trans*29
@@ -362,7 +365,7 @@ trans_proc_fee = total_trans_cost/trans_value
 
 #daily returns of long short strategy
 #avg_long_ret = starting_capital*long_returns_daily.mean(axis=1)-transaction_cost
-avg_long_ret = long_returns_daily.mean(axis=1)-trans_proc_fee
+avg_long_ret = long_returns_daily.mean(axis=1)-2*trans_proc_fee
 #avg_short_ret = short_returns_daily.mean(axis=1)-trans_proc_fee
 daily_returns_strat = avg_long_ret.dropna(how='all').fillna(0) #+avg_short_ret
 
@@ -380,10 +383,10 @@ cum_ret =(1 + daily_returns_strat).cumprod()
 ##########################################
 
 print("   ")
-print('Significant day effect MID CAP')
+print('Significant day effect')
 mean_ret = cum_ret.tail(1)**(1/7)-1
 print("CAGR " + str(mean_ret[0]))
-vol = (daily_returns_strat.std()*math.sqrt(82))
+vol = (daily_returns_strat.std()*math.sqrt(252))
 sharpe = mean_ret/vol
 kelly_f = mean_ret/vol**2
 print("Volatility " + str(vol))
@@ -395,56 +398,19 @@ Daily_Drawdown = cum_ret/Roll_Max - 1.0
 Max_Daily_Drawdown = Daily_Drawdown.cummin()
 print("Max drawdown " + str(Max_Daily_Drawdown.tail(1)[0]))
 
-#plots
-plt.plot(cum_ret)
-#plt.plot(cum_long_ret)
-#plt.plot(cum_short_ret)
-#plt.plot(Daily_Drawdown)
-
-
-###################################################
-#modified strategy considering factor momentum
-####################################################
-mom_cum_ret = (1+daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0]).cumprod()
-#mom_cum_ret = starting_capital + np.cumsum(daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0])
-mom_daily_ret_RE = mom_cum_ret.pct_change()
-
-
-mom_mean_ret = mom_cum_ret.tail(1)**(1/7)-1
-
-mom_vol = (daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0].std()*math.sqrt(82))
-mom_sharpe = mom_mean_ret/mom_vol
-mom_kelly_f = mom_mean_ret/mom_vol**2
-
-#maxiumum drawdown
-mom_Roll_Max = mom_cum_ret.cummax()
-mom_Daily_Drawdown = mom_cum_ret/mom_Roll_Max - 1.0
-mom_Max_Daily_Drawdown = mom_Daily_Drawdown.cummin()
-print("   ")
-print('Significant day effect with factor momentum MID CAPS')
-print("CAGR " + str(mom_mean_ret[0]))
-print("Volatility " + str(mom_vol))
-
-print("Sharpe " + str(mom_sharpe[0]))
-print("Kelly fraction " + str(mom_kelly_f[0]))
-#maxiumum drawdown
-Roll_Max = cum_ret.cummax()
-Daily_Drawdown = cum_ret/Roll_Max - 1.0
-Max_Daily_Drawdown = Daily_Drawdown.cummin()
-print("Max drawdown " + str(mom_Max_Daily_Drawdown.tail(1)[0]))
 
 #calculate log returns st reversal momentum strategy and print returns per year
-mom_log_ret_RE = np.log(mom_cum_ret)-np.log(mom_cum_ret.shift(1))
-per = mom_log_ret_RE.index.to_period("Y")
-g = mom_log_ret_RE.groupby(per)
+log_ret = np.log(cum_ret)-np.log(cum_ret.shift(1))
+per = log_ret.index.to_period("Y")
+g = log_ret.groupby(per)
 ret_per_year = g.sum()
 print("   ")
-print("significant day effect with factor momentum returns per year MID CAPS")
+print("significant day effect, names with turnover >3 mln")
 print(ret_per_year)
 
 
-per_M = mom_log_ret_RE.index.to_period("M")
-grouping_month = mom_log_ret_RE.groupby(per_M)
+per_M = log_ret.index.to_period("M")
+grouping_month = log_ret.groupby(per_M)
 ret_per_month = grouping_month.sum()
 #stats for monthly returns
 percent_positive = ret_per_month[ret_per_month>0].count()/ret_per_month.count()
@@ -452,7 +418,46 @@ print("")
 print("percent positive months " + str(percent_positive))
 
 
-plt.plot(mom_cum_ret)
+#plots
+plt.plot(cum_ret)
+#plt.plot(cum_long_ret)
+#plt.plot(cum_short_ret)
+#plt.plot(Daily_Drawdown)
+
+
+# ###################################################
+# #modified strategy considering factor momentum
+# ####################################################
+# mom_cum_ret = (1+daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0]).cumprod()
+# #mom_cum_ret = starting_capital + np.cumsum(daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0])
+# mom_daily_ret_RE = mom_cum_ret.pct_change()
+
+
+# mom_mean_ret = mom_cum_ret.tail(1)**(1/7)-1
+
+# mom_vol = (daily_returns_strat[cum_ret.pct_change(20).shift(1) > 0].std()*math.sqrt(82))
+# mom_sharpe = mom_mean_ret/mom_vol
+# mom_kelly_f = mom_mean_ret/mom_vol**2
+
+# #maxiumum drawdown
+# mom_Roll_Max = mom_cum_ret.cummax()
+# mom_Daily_Drawdown = mom_cum_ret/mom_Roll_Max - 1.0
+# mom_Max_Daily_Drawdown = mom_Daily_Drawdown.cummin()
+# print("   ")
+# print('Significant day effect with factor momentum MID CAPS')
+# print("CAGR " + str(mom_mean_ret[0]))
+# print("Volatility " + str(mom_vol))
+
+# print("Sharpe " + str(mom_sharpe[0]))
+# print("Kelly fraction " + str(mom_kelly_f[0]))
+# #maxiumum drawdown
+# Roll_Max = cum_ret.cummax()
+# Daily_Drawdown = cum_ret/Roll_Max - 1.0
+# Max_Daily_Drawdown = Daily_Drawdown.cummin()
+# print("Max drawdown " + str(mom_Max_Daily_Drawdown.tail(1)[0]))
+
+
+# plt.plot(mom_cum_ret)
 
 ################
 #buy and hold
@@ -486,8 +491,6 @@ print("Sharpe " + str(boh_sharpe[0]))
 print("Kelly fraction " + str(boh_kelly_f[0]))
 
 print("Max drawdown " + str(boh_Max_Daily_Drawdown.tail(1)[0]))
-
-
 
 
 
