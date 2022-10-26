@@ -131,7 +131,7 @@ long_returns_daily = ret_daily*long_ind
 
 
 #calc transaction cost
-trans = long_ind-long_ind.shift(1)
+trans = long_ind
 n_trans = trans.count().sum()
 
 trans_value = n_trans*100000
@@ -158,7 +158,7 @@ cum_ret =(1 + daily_returns_strat).cumprod()
 #stats for basic strategy
 ##########################################
 
-print("   ")
+print("Basic strategy:   ")
 print('Significant day effect LARGE CAP')
 mean_ret = cum_ret.tail(1)**(1/7)-1
 print("CAGR " + str(mean_ret[0]))
@@ -199,7 +199,7 @@ mom_kelly_f = mom_mean_ret/mom_vol**2
 mom_Roll_Max = mom_cum_ret.cummax()
 mom_Daily_Drawdown = mom_cum_ret/mom_Roll_Max - 1.0
 mom_Max_Daily_Drawdown = mom_Daily_Drawdown.cummin()
-print("   ")
+print("Factor momentum:   ")
 print('Significant day effect with momentum LARGE CAP')
 print("CAGR " + str(mom_mean_ret[0]))
 print("Volatility " + str(mom_vol))
@@ -244,7 +244,7 @@ cum_ret_boh =  (1 + avg_ret_boh).cumprod()
 plt.plot(cum_ret_boh)
 
 #stats buy and hold
-print("   ")
+print(" Buy and Hold  ")
 print('Buy and hold stats')
 boh_mean_ret = cum_ret_boh.tail(1)**(1/7)-1
 boh_vol = (avg_ret_boh.std()*math.sqrt(252))
