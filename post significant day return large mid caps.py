@@ -309,6 +309,11 @@ tickers = "EVO.ST "\
 "TRIAN-B.ST " \
 "VBG-B.ST " \
 "XANO-B.ST " \
+"CINIS.ST " \
+"MSON-B.ST " \
+"EMIL-B.ST " \
+"SLP-B.ST " \
+"4C.ST " \
 "XSPRAY.ST"
 
 
