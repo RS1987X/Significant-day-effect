@@ -378,7 +378,7 @@ total_trans_cost = n_trans*29
 trans_proc_fee = total_trans_cost/trans_value
 
 
-long_returns_daily = 1*(ret_daily-2*trans_proc_fee)*long_ind.shift(1)
+long_returns_daily = 1*(ret_daily)*long_ind.shift(1)
 short_returns_daily = -1*(ret_daily+2*trans_proc_fee)*short_ind.shift(1)
 
 
